@@ -1,119 +1,168 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
-    <title>Benjamin's portfolio</title>
-    <link rel="stylesheet" href="./css/portfolio.css">
-</head>
-<!--Body-->
-<body class="background">
-<!--nav bar-->
-    <div class="Navbar">
-        <a class="active" href="#Home">Home</a>
-        <a href="#About">About</a>
-        <a href="#Github">Github</a>
-        <a href="#Contact">Contact</a>
-    </div>
+<html>
 
-    <br>
-    <br>
-<!--video-->
-    <div id="Home">
-        <video autoplay muted loop id="Typing_Video">
-            <source src="./img/video/portfolio_video.mp4" type="video/mp4">        
-        </video>
-    </div>
+    <!--head-->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width" />
+        <title>Benjamin Portfolio</title>
+        <link rel="shortcut icon" type="img/jpg" href="./img/coding_icon.png">
+        <link rel="stylesheet" type="text/css" href="./css/portfolio.css">
+    </head>
 
-    <div class="Video_Text">
-        <h1 class="white-text">Benjamin's Portfolio</h1>
-        <strong>
-            <p class="center">
-                <q>The computer programmer is a creator of univeres for which he alone is the lawgiver.
-                    <br>No playwright, no stage director, no empors,however pwerful, has ever exercised such absolute authority to arrange a 
-                    stage or 
-                    <br> field of battle and to command such unswervingly dutiful actors or troops.
-                </q>
-                <br> - Joseph Weizenbaum
-                <br>
-                <br> My name is Benjamin. Welcome to my portfolio website. on it, I will tell you about my background and experience.
-                <br>
-                <br> Thank you for stopping by and enjoy!
-            </p>
-        </strong>
-    </div>
-<!--About section-->
-    <div class="Row" id="About">
-        <div class="Column_2">
-            <img src="./img/portfolio.jpg" alt="my image">
+    <!--Body-->
+    <body class="Background">
+
+        <!--Navbar-->
+        <div class="Navbar">
+            <a class="active" href="#Home">Home</a>
+            <!--new section added-->
+            <a href="#Slideshow">Slideshow</a>
+            <a href="#About">About</a>
+            <a href="#GitHub">GitHub</a>
+            <!-- Onclick and ondblclick functions added to open and close the contact form -->
+            <a onclick="openForm()" ondblclick="closeForm()" class="contact"></a>
         </div>
 
-        <div class="Column_1">
-            <h1>About</h1>
-            <p>
-               "I am a a new devolper, and I love to play and watch sports and
-                I love exploring new places."
-            <br>
-            <br>I am a student at <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a>" Im a Software Developer at a Boot Camp, and current student."
+       <!--Background Video-->
+        <div id="Home">
+            <video autoplay muted loop id="Typing_Video">
+                <source src="./img/video/portfolio_video.mp4" type="video/mp4">
+                <!--display message if video fails to run-->
+                Your browser does not support HTML5 video.
+            </video>
+        </div>
+
+        <!--Video text-->
+        <div class="Video_Text">
+            <h1 class="white-text">Benjamin's Portfolio</h1>
+            <strong>
+                <p class="center">
+                    <q>The computer programmer is a creator of universes for which he alone is the lawgiver.
+                        <br>No playwright, no stage director, no emperor, however powerful, has ever exercised such absolute authority to arrange a stage or
+                        <br>field of battle and to command such unswervingly dutiful actors or troops.
+                    </q>
+                    <br> -Joseph Weizenbaum
                     <br>
-                    <br>I want to become a developer and would love to work with you on your project. <a href="#Contact">Contact</a> me below!
+                    <br> My name is Benjamin. Welcome to my portfolio website. on it, I will tell you about my background and experience.
+                    <br>
+                    <br> Thank you for stopping by and enjoy!
                 </p>
+            </strong>
+        </div>
+
+         <!-- Slideshow section added -->
+         <div id="Slideshow">
+            <div id="Slideshow_Background"> 
+                <div id="Slideshow_Container">
+                    <!-- Slide 1 of 6 -->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="./img/IMG_0044.JPG" alt="Picture of yourself">
+                        <div class="text">I'm available to assist you on your project!</div>
+                    </div>
+                    <!-- Slide 2 of 6 -->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="./img/HTML_CSS_and_JavaScript.jpeg" alt="HTML, CSS, and JS logos"> 
+                        <div class="text">I am a full-stack software developer,<br> trained in:<br>HTML, CSS, JavaScript,</div>
+                    </div>
+                    <!-- Slide 3 of 6 -->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="./img/Python.png" alt="Python logo">
+                        <div class="text">the popular programming language Python,</div>
+                    </div>
+                    <!-- Slide 4 of 6 -->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="./img/C_Sharp_and_Dot_NET.png" alt="C# logo">
+                        <div class="text">C#, .NET Framework, ASP.NET, MVC, </div>
+                    </div>
+                    <!-- Slide 5 of 6 -->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="./img/SQL_and_Database.jpg" alt="SQL logo"> 
+                        <div class="text">back end development, databases and SQL.</div>
+                    </div>
+                    <!-- Slide 6 of 6 -->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="./img/contact.png" alt="Replace with a picture of your choosing"> 
+                        <div class="text"><a class="white-text contact" onclick="openForm()">Contact me now!</a></div> 
+                    </div>
+                    <!-- Previous and next buttons -->
+                    <a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="Next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+                <br> <!-- Adds a space between the slideshow images and the dots -->
+
+                <!-- Slideshow dots (these are another way for users to navigate through the slideshow) -->
+                <div style="text-align: center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span> 
+                    <span class="dot" onclick="currentSlide(4)"></span> 
+                    <span class="dot" onclick="currentSlide(5)"></span> 
+                    <span class="dot" onclick="currentSlide(6)"></span> 
+                </div>
             </div>
         </div>
 
-        
-        <div class="Row" id="Github">
-            <!--Left column-->
-            <div class="Column_1">
-                <h1>GitHub</h1>
-                <p>
-                    You can view my coding projects on my GitHub profile here:
-                    <br>
-                    <p class="center"><a href="https://github.com/benjie6" target="_blank">my Github</a></p>
-                </p>
+        <!--About section-->
+        <div class="Row" id="About">
+            <!--Left colum-->
+            <div class="Column_2">
+                <img src="./img/portfolio.jpg" alt="my image">
             </div>
             <!--Right column-->
+            <div class="Column_1">
+                <h1>About</h1>
+                <p>
+                    I am a a new devolper, and I love to play and watch sports and I love exploring new places.
+                    <br>
+                    <br> I am s student at <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a>'s Software Developer Boot Camp, and trained and experienced in the following web programming languages: HTML, CSS, JavScript, SQL, Python and more.
+                    <br>
+                    <br>I am a full-stack devloper and would love to work with you on your porject. <a href="#Contact">Contact</a> me below!
+                </p>
+            </div>
+        </div>
+
+        <!--GitHub section-->
+        <div class="Row" id="GitHub">
+            <!--left column-->
+            <div class="Column_1">
+                <h1>GitHub</h1>
+                <p>You can view my coding projects on my GitHub profile:
+                    <br>
+                    <p class="center"><a href="https://github.com/benjie6" target="_blank">The Tech Academy GitHub</a></p>
+                </p>
+            </div>
+            <!--right column-->
             <div class="Column_2">
-                <a href="https://github.com/benjie6" target="_blank"><img src="./img/Github.png" alt="GitHub Logo"></a>
+                <a href="https://github.com/benjie6" target="_blank"><img src="./img/GitHub.png" alt="GitHub logo"></a> 
             </div>
         </div>
 
-        <!--Contact section-->
-        <div class="Row" id="Contact">
-            <!--Contact image, left column-->
-            <div class="Column_2 Column_tall">
-                <img src="./img/contact.png" alt="Contact_Image">
+         <!-- Contact form -->
+         <div id="Contact">
+            <button onclick="openForm()" class="Pop_Up_Button">CONTACT</button>
+            <div class="form-popup" id="myForm">
+                 <form action="https://formspree.io/info@learncodinganywhere.com" method="POST" class="form-container"> <!-- Here we are using a free online service from https://formspree.io/ to send our contact form to an email address of our choosing - note: it will not run unless live on the internet, you have to push it to your online website first -->
+                     <h1>Contact</h1>
+                     <label for="name"><b>Name</b></label>
+                       <input type="text" placeholder="Type your name here" name="name" required>
+                     <label for="phone"><b>Phone</b></label>
+                       <input type="text" placeholder="Type your phone number here" name="phone">
+                     <label for="email"><b>Email</b></label>		
+                       <input type="text" placeholder="Type your email address here" name="email" required>
+                     <label for="message"><b>Message</b></label>
+                       <input type="text" placeholder="Type your message here" name="message">
+          
+                     <button type="submit" class="btn">SUBMIT</button>
+                     <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
+                 </form>
             </div>
-            <!--Contact form, right column-->
-            <div class="Column_1 Column_tall">
-                <h1>Contact</h1>
-                <!--This specifies where and how to send the form data; we are leaving it blank-->
-                <form action="" method="POST"> <!-- Here we are utilizing a 3rd party service to submit the contact form data, insert your formspree endpoint in the action attribute -->
-                    <label>Name:</label>
-                        <input type="text" placeholder="Please enter your name here">
-                    <label>Email:</label>
-                        <input type="text" id="Email" name="Email" placeholder="Please enter your email here">
-                    <label>Message:</label>
-                        <input type="text" id="Message" name="Message" placeholder="Please write your message here">
-                        <input type="submit" value="SUBMIT">
-                </form>
-            </div>
-        </div>
+         </div>
 
-        <!--Footer section-->
-        <footer>
-            <p>
+         <!--footer section-->
+         <footer>
                 <p class="center">&copy Prosper Consulting Inc., <a href="https://www.learncodinganywhere.com/" target="_blank">The Tech Academy</a></p>
-                <br>
-            </p>
-        </footer>
-            </p>
-        </div>
-    </div>
-
-    
-</body>
-</html>
-    
-</body>
+         </footer>
+         <script src="./js/portfolio.js"></script>
+    </body>
 </html>
